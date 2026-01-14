@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>신나는 국어</title>
+    <!-- Google Fonts for a kid-friendly look -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Jua&family=Gamja+Flower&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --primary-bg: #E0F7FA;
+            --card-1: #FF8A65; /* Poetry - Warm Orange */
+            --card-2: #4DB6AC; /* Book Request - Teal */
+            --card-3: #9575CD; /* Grammar - Purple */
+            --card-4: #F06292; /* Reading - Pink */
+            --text-color: #37474F;
+        }
+
+        body {
+            font-family: 'Jua', sans-serif;
+            background-color: var(--primary-bg);
+            margin: 0;
+            padding: 0;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            min-height: 100vh;
+            background-image: radial-gradient(#B2EBF2 20%, transparent 20%),
+                              radial-gradient(#B2EBF2 20%, transparent 20%);
+            background-position: 0 0, 50px 50px;
+            background-size: 100px 100px;
+        }
+
+        header {
+            text-align: center;
+            margin-bottom: 50px;
+            animation: bounce 2s infinite;
+        }
+
+        h1 {
+            font-size: 5rem;
+            color: #0097A7;
+            text-shadow: 4px 4px 0px #FFFFFF, 7px 7px 0px rgba(0,0,0,0.1);
+            margin: 0;
+        }
+
+        .subtitle {
+            font-size: 1.5rem;
+            color: #546E7A;
+            margin-top: 10px;
+        }
+
+        .menu-container {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 40px;
+            max-width: 800px;
+            width: 90%;
+        }
+
+        @media (max-width: 600px) {
+            .menu-container {
+                grid-template-columns: 1fr;
+            }
+        }
+
+        .menu-item {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            height: 200px;
+            border-radius: 30px;
+            text-decoration: none;
+            color: white;
+            font-size: 2rem;
+            box-shadow: 0 10px 20px rgba(0,0,0,0.15), 
+                        inset 0 0 0 5px rgba(255,255,255,0.2);
+            transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .menu-item:hover {
+            transform: translateY(-10px) scale(1.02);
+            box-shadow: 0 20px 30px rgba(0,0,0,0.2), 
+                        inset 0 0 0 5px rgba(255,255,255,0.4);
+        }
+
+        .menu-item:active {
+            transform: translateY(-5px);
+        }
+
+        .menu-item .icon {
+            font-size: 4rem;
+            margin-bottom: 10px;
+            filter: drop-shadow(2px 2px 0 rgba(0,0,0,0.2));
+        }
+
+        /* Specific Card Styles */
+        .item-1 { background-color: var(--card-1); }
+        .item-2 { background-color: var(--card-2); }
+        .item-3 { background-color: var(--card-3); }
+        .item-4 { background-color: var(--card-4); }
+
+        /* Icon Animation on Hover */
+        .menu-item:hover .icon {
+            animation: wiggle 0.5s ease-in-out infinite;
+        }
+
+        @keyframes bounce {
+            0%, 100% { transform: translateY(0); }
+            50% { transform: translateY(-15px); }
+        }
+
+        @keyframes wiggle {
+            0%, 100% { transform: rotate(-5deg); }
+            50% { transform: rotate(5deg); }
+        }
+        
+    </style>
+</head>
+<body>
+
+    <header>
+        <h1>🎈 신나는 국어 🎈</h1>
+        <div class="subtitle">재미있는 국어 공부를 시작해볼까요?</div>
+    </header>
+
+    <div class="menu-container">
+        <!-- Poetry Writing -->
+        <a href="Poetry Writing.html" class="menu-item item-1">
+            <div class="icon">✍️</div>
+            <div>시 쓰기</div>
+        </a>
+
+        <!-- Book Request -->
+        <a href="book-request.html" class="menu-item item-2">
+            <div class="icon">📚</div>
+            <div>도서 신청</div>
+        </a>
+
+        <!-- Grammar Game -->
+        <a href="grammar_game.html" class="menu-item item-3">
+            <div class="icon">🧩</div>
+            <div>문법 게임</div>
+        </a>
+
+        <!-- Reading Study -->
+        <a href="reading-study.html" class="menu-item item-4">
+            <div class="icon">📖</div>
+            <div>읽기 공부</div>
+        </a>
+    </div>
+
+</body>
+</html>
